@@ -21,6 +21,14 @@ public class AdminController {
     }
 
     @PostMapping("/add")
+    public String insertA(@ModelAttribute User user, Model model) {
+        return validationService.validateUserDetails(user, model);
+    }
+    @PostMapping("/add")
+    public String insertB(@ModelAttribute User user, Model model) {
+        return validationService.validateUserDetails(user, model);
+    }
+    @PostMapping("/add")
     public String insert(@ModelAttribute User user, Model model) {
         return validationService.validateUserDetails(user, model);
     }
